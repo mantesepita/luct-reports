@@ -1,38 +1,135 @@
-.App {
+/* PRDashboard.css - Simple Version */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f6fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.pr-dashboard h2 {
   text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Grid layout for sections */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.grid-item h4 {
+  margin-bottom: 5px;
+  color: #333;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Buttons */
+button {
+  padding: 6px 12px;
+  margin-top: 5px;
+  border: none;
+  background-color: #40739e;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #192a56;
+}
+
+/* Forms */
+.dashboard-form {
+  margin-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.dashboard-form input,
+.dashboard-form select,
+.dashboard-form textarea {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Lists for submitted items */
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 5px;
+}
+
+li {
+  padding: 4px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 14px;
+}
+/* Monitoring Form Style */
+.monitoring-form {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.monitoring-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #273c75;
+}
+
+.monitoring-form .form-label {
+  font-weight: 500;
+}
+
+.monitoring-form .form-control,
+.monitoring-form .form-select,
+.monitoring-form textarea {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #dcdde1;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.monitoring-form textarea {
+  resize: vertical;
+}
+
+.monitoring-form .signature-canvas {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  height: 150px;
+}
+
+.monitoring-form button {
+  font-weight: bold;
+}
+
+.monitoring-form .alert {
+  margin-bottom: 20px;
+}
+
+.monitoring-form .d-flex.gap-2 {
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .monitoring-form {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .monitoring-form .signature-canvas {
+    height: 120px;
   }
 }
